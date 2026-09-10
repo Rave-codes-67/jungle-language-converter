@@ -1,0 +1,338 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	background-image: radial-gradient(#ffad7a, #FCB990);
+}
+
+
+nav {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	letter-spacing: 1.7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:  30px 30px 0 30px;
+  background-color: #1e1e24;
+  padding: 1rem 3rem;
+	border-radius: 12px;
+}
+
+.nav-logo a {
+	color: #f4bdc3;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-decoration: none;
+	user-select: none;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    list-style: none; /* Removes bullet points */
+}
+
+.nav-links li {
+		padding: 0 25px;
+		user-select: none;
+		margin-top: 15px;
+		margin-bottom: 15px;
+}
+
+/* Styling for the anchor links */
+.nav-links a {
+    color: #f4bdc3;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Hover effects for links */
+.nav-links a:hover {
+    color: #f77f00 /* Changes to a nice accent */
+}
+
+
+.first-sight {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.part {
+  width: 50%;
+}
+
+.h2 { 
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* #typing-text::after {
+  content: "|";
+  margin-left: -5px;
+  animation: blink 0.7s steps(1, end) infinite;
+  font-weight: normal;
+  opacity: 0.8;
+} */
+
+#typing-text::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: black;
+  margin-left: 1px;
+  animation: blink 0.7s steps(1, end) infinite;
+  animation-fill-mode: both;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  50% { opacity: 0 ; }
+}
+
+#typing-text.no-blink::after {
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: red;
+}
+
+.text-cta {
+  width: 700px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.static {
+  color: red;
+  text-shadow: 0 0 5px red;
+}
+
+.explanation-section {
+  background-color: #FCB990;
+  padding: 30px 80px;
+  border: 1px solid black;
+}
+
+.sub-title {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.article-1 {
+  margin-bottom: 40px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.article-2 {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.details {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.main-section {
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+  height: 110vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #FCB990 ;
+}
+
+.top-buttons {
+  margin-bottom: 20px;
+}
+
+.switch-btn {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  background-color: rgb(224, 205, 205);
+  border-radius: 6px;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  margin: 0 20px;
+  cursor: pointer;
+  box-shadow: 2px 3px 10px 2px rgba(0,0,0,0.2);
+  transition: background-color 0.35s ease-out, color 0.35s ease-out, transform 0.35s ease-out;
+  user-select: none;
+}
+
+.switch-btn:hover {
+  transform: translateY(-3px);
+}
+
+.switch-btn.active {
+  background-color: black;
+  color: white;
+}
+
+.moving-scroll {
+  position: absolute;
+  top: 12px;
+  height: 0.6em;
+  width: 432px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.scroll {
+  background-color: red;
+  height: 0.5em;
+  width: 194px;
+  border-radius: 15px;
+  transition: transform 0.7s ease-out, width 0.6s ease-out;
+}
+
+@keyframes growShrink {
+  0%   { width: 194px; }
+  50%  { width: 210px; }
+  100% { width: 194px; }
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+#slider {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+#converter {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 340px;
+  height: 75px;
+  border: solid 1px;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+.js-generate1, .js-generate2, .explore {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 16px 40px;
+  margin-top: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.title {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+
+#input-cta-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.textarea {
+  position: relative;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 370px;
+  height: 260px;
+  background-color: #FCB990;
+  color: black;
+  font-weight: 400;
+  border: 0.5px dashed black;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-left: -12px;
+  padding: 20px 25px;
+  overflow: hidden;
+}
+
+.copy-btn {
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  font-size: 14px;
+  background-color: #f00;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.copy-btn:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}

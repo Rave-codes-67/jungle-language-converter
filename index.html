@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jungle Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <header class="navigations">
+      <nav>
+        <div class="nav-logo">
+            <a href="#">Rave's Jungle Converter</a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="https://github.com/Rave-codes-67/jungle-language-converter">Source Code</a></li>
+          <li><a href="https://github.com/Rave-codes-67/">My Github</a></li>
+          <li><a href="https://github.com/Rave-codes-67">Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="first-sight"> 
+      <div class="part">
+        <h2 class="h2">
+          <span class="static">From </span><span id="typing-text"></span>
+        </h2>
+        <h1>Language Converter</h1>
+        <p class="text-cta">Convert English to a secret language only you and your friend knows; Jungle Language. And vice versa</p>
+
+        <button class="explore" onclick="location.href='#main-sec'">Explore Now</button>
+      </div>
+    </section>
+
+    <section class="explanation-section">
+      <article class="article-1">
+      <h3 class="sub-title">What is Jungle Language?</h3>
+      <p class="details">
+        Jungle language is a private unofficial coded language used infrequently
+        around the world; it allows people(friends, family, etc.) to chat 
+        and communicate in an interractive way both online and physically privately.
+        <br><br>
+        Its a simple made up language for secret communication, typically by combining
+        vowels with numbers, and is not a real language like Inga or historical code.
+      </p>
+      </article>
+      <article class="article-2">
+        <h3 class="sub-title">How does jungle language work?</h3>
+        <p class="details">
+          Like i mentioned above, Jungle language is not an official language so there
+          are different methods of convertion, but the most common method is by replacing
+          all vowels in a sentence with numbers, and thats the method i use and will be explained below. <br>
+          <span style="font-style: italic;">ps. The converter also uses this method.</span>
+          <br><br>
+          This method requires you to convert all the vowels[a, e, i, o, u] in your sentence to numbers[1, 2, 3, 4, 5] 
+          respectively, therefore: <span class="bold">a = 1, e = 2, i = 3, o = 4, u = 5.</span> And then add 'a' to the 
+          back of the consonants.
+        </p>
+
+        <p class="details">
+          <br>examples: <br>
+          1. how are you doing -> ha4wa 1ra2 ya45 da43naga. <br>
+          2. Jungle Language is actually easy -> Ja5nagala2 La1naga51ga2 3sa 1cata51lalaya 21saya. <br>
+          3. Practice with the converter -> Para1cata3ca2 wa3taha taha2 ca4nava2rata2ra <br>
+          4. It's not that hard -> Iata'sa na4ta taha1ta ha1rada
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="main-sec">
+      <div class="top-buttons">
+        <button id="btnJungle" class="switch-btn active">Jungle → English</button>
+        <button id="btnEnglish" class="switch-btn">English → Jungle</button>
+      </div>
+      <div class="container">
+        <div class="moving-scroll">
+          <div class="scroll"></div>
+        </div>
+        <div id="slider">
+          <div class="jungle-to-eng" id="converter">
+            <h2 class="title">Jungle to English Converter</h2>
+
+            <p id="input-cta-text">Input Jungle Language:</p>
+            <input class="js-jungle" type="text" placeholder="Text in Jungle language eg. ja5nagala2">
+
+            <button class="js-generate1" onclick="convertToEnglish();">Generate</button>
+            <div class="textarea">
+              <p class="js-converted"></p>
+              <button class="copy-btn" onclick="copyText(this, '.js-converted')">Copy</button>
+            </div>
+          </div>
+          
+          <div class="eng-to-jungle" id="converter">
+            <h2 class="title">English to Jungle Converter</h2>
+
+            <p id="input-cta-text">Input English Language:</p>
+            <input class="js-english" type="text" placeholder="Your text in English eg. Jungle">
+
+            <button class="js-generate2" onclick="convertToJungle();"
+            >Generate</button>
+            <div class="textarea">
+              <p class="js-converted1"></p>
+              <button class="copy-btn" onclick="copyText(this, '.js-converted1')">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+
+    </script>
+    <script src="top.js"></script>
+    <script src="conversion.js"></script>
+    <script src="styler.js"></script>
+  </body>
+</html>
